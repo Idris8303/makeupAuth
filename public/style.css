@@ -1,0 +1,14 @@
+body{
+background-color: darkgrey;
+}
+
+.container{
+background-color: lightgrey;
+border: solid 1px black;
+padding: 20px;
+}
+
+form{
+  border: 1px solid grey;
+  padding: 14px;
+}
