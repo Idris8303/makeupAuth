@@ -42,6 +42,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 
  app.use(require('./routes/general'));
  app.use(require('./routes/auth'));
+ app.get('/info', function(req, res){
+
+ });
 
 
 

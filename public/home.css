@@ -1,0 +1,12 @@
+body{
+background-color: lightgrey;
+}
+
+.container{
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow: 5px 5px darkgrey;
+  padding: 20px;
+  margin-left: 14;
+  margin-right: 70%;
+}
