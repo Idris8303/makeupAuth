@@ -11,11 +11,11 @@ function configure(passport) {
         done(err);
       }
       else if (user) {
-        console.log('LocalStrategy-Successful login');
+        console.log('LocalStrategy-You are logged in');
         done(null, user);
       }
       else{
-        console.log('LocalStrategy-could not find the user or whatevs');
+        console.log('LocalStrategy-could not find this user');
         done(null, false);
       }
     });
