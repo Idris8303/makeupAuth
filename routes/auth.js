@@ -19,7 +19,7 @@ router.get('/register', (req, res) =>{
 router.post('/register', (req, res) =>{
   console.log('body',req.body);
 
-  const user = new User({ username: req.body.username, password: req.body.password});
+  const user = new User({ username: req.body.username, password: req.body.password, title: req.body.title, yearsOfEmployment: req.body.yearsOfEmployment, comment: req.body.comment});
   user.save((err) =>{
     if (err) {
       console.log('There was an error saving the user.',err);
@@ -28,7 +28,7 @@ router.post('/register', (req, res) =>{
   });
 
 },passport.authenticate('local',{
-  successfulRedirect: '/home' 
+  successfulRedirect: '/home'
 }));
 
 router.get('/logout',(req, res) =>{

@@ -16,9 +16,7 @@ function authRequired(req, res, next){
 
 router.get('/home', authRequired, (req, res) =>{
   console.log('the user?', req.user);
-  res.render('home', {
-    username: req.user.username
-  });
+  res.render('home', req.user);
 })
 
 module.exports = router;
