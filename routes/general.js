@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const User = require('../models/user');
 
 router.get('/', (req, res) =>{
   res.render('index');
@@ -15,8 +16,15 @@ function authRequired(req, res, next){
 
 
 router.get('/home', authRequired, (req, res) =>{
-  console.log('the user?', req.user);
-  res.render('home', req.user);
+  User.find({})
+.then(function(data){
+  res.render('home', {users: data});
 })
+.catch(function(err){
+  res.redirect('/');
+  });
+});
+
+
 
 module.exports = router;
